@@ -1,4 +1,3 @@
-
 FROM maven:3.8.5-openjdk-17 AS build
 WORKDIR /app
 COPY pom.xml .
@@ -21,4 +20,4 @@ ENV CATALINA_OPTS="-Djava.awt.headless=true -server"
 EXPOSE 8080
 
 # Start Tomcat and show deployment status
-CMD ["sh", "-c", "catalina.sh run & s
+CMD ["sh", "-c", "catalina.sh run & sleep 10 && echo 'Checking deployment...' && ls -la /usr/local/tomcat/webapps/ && tail -f /usr/local/tomcat/logs/catalina.out"]
