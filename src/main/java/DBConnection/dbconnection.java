@@ -8,8 +8,8 @@ public class dbconnection {
 	 private static final String JDBC_URL = System.getenv("JDBC_URL");/*"jdbc:mysql://localhost:3306/re";*/
 	    private static final String JDBC_USER = System.getenv("JDBC_USER");/*"root";*/
 	    private static final String JDBC_PASSWORD = System.getenv("JDBC_PASSWORD");/*"root";*/
-		System.out.println("DB URL: " + System.getenv("JDBC_URL"));
-System.out.println("DB USER: " + System.getenv("JDBC_USER"));
+		//System.out.println("DB URL: " + System.getenv("JDBC_URL"));
+//System.out.println("DB USER: " + System.getenv("JDBC_USER"));
 
 
 	    public static Connection getConnection() {
